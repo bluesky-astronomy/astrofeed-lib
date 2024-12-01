@@ -42,7 +42,7 @@ class AccountQuery:
 
     def get_accounts(self) -> set:
         self.query_database()
-        return self.accounts  # type ignore (because pylance is a silly thing here. this should always be a set)
+        return self.accounts  # type: ignore (because pylance is a silly thing here. this should always be a set)
 
 
 class CachedAccountQuery(AccountQuery):
