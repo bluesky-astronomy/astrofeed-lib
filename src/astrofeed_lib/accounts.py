@@ -42,7 +42,7 @@ class AccountQuery:
 
     def get_accounts(self) -> set:
         self.query_database()
-        return self.accounts  # type: ignore (because pylance is a silly thing here. this should always be a set)
+        return self.accounts  # type ignore (because pylance is a silly thing here. this should always be a set)
 
 
 class CachedAccountQuery(AccountQuery):
@@ -64,7 +64,7 @@ class CachedAccountQuery(AccountQuery):
         if is_overdue or self.accounts is None:
             self.query_database()
             self.last_query_time = time.time()
-        return self.accounts  # type: ignore (because pylance is a silly thing here. this should always be a set)
+        return self.accounts  # type ignore (because pylance is a silly thing here. this should always be a set)
 
 
 class CachedModeratorList(CachedAccountQuery):
